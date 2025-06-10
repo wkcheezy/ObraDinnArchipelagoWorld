@@ -10,9 +10,9 @@ from .subclasses import Character
 from ..LauncherComponents import launch_subprocess, components, Component, Type
 
 
-def launch_client():
+def launch_client(*args):
     from .client import launch
-    launch_subprocess(launch, name="ObraDinnClient")
+    launch_subprocess(launch, name="ObraDinnClient",args=args))
 
 
 components.append(
