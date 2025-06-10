@@ -250,10 +250,10 @@ async def proxy_loop(ctx: ObraDinnContext):
         logger.info("Aborting ObraDinn Proxy Client due to errors")
 
 
-def launch():
+def launch(*launch_args):
     async def main():
         parser = get_base_parser()
-        args = parser.parse_args()
+        args = parser.parse_args(launch_args)
 
         ctx = ObraDinnContext(args.connect, args.password)
         logger.info("Starting Return of the Obra Dinn proxy server")
