@@ -12,7 +12,7 @@ from ..LauncherComponents import launch_subprocess, components, Component, Type
 
 def launch_client(*args):
     from .client import launch
-    launch_subprocess(launch, name="ObraDinnClient",args=args))
+    launch_subprocess(launch, name="ObraDinnClient",args=args)
 
 
 components.append(
